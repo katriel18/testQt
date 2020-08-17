@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 
 #include "iostream"
+
+#include "mainopengl.h"
+
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,6 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+   MiWidgetOpenGL *wogl = new MiWidgetOpenGL();
+   ui->layaout->addWidget(wogl);
+
+
+
 }
 
 MainWindow::~MainWindow()
